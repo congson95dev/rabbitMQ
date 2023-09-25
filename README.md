@@ -3,9 +3,9 @@
 ## Before we begin, we need to install pika and rabbitMQ by docker (simpler than normal rabbitMQ installation)
 
 ## Install pika
-pip install pika --upgrade
+`pip install pika --upgrade`
 
-## Install rabbitMQ
+## Install rabbitMQ by Docker
 https://www.rabbitmq.com/download.html
 
 ## rabbitMQ default behavior is acting by "round robin", which is by orderly
