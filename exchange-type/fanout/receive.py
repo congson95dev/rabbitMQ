@@ -7,13 +7,13 @@ channel = connection.channel()
 
 # define exchange_type='fanout' will make all receiver subcribe to the sender,
 # and whenever sender send a message, all receiver will receive
-channel.exchange_declare(exchange='logs', exchange_type='fanout')
+channel.exchange_declare(exchange='fanout_logs', exchange_type='fanout')
 
 # set queue as blank => queue_name render randomly
 result = channel.queue_declare(queue='', exclusive=True)
 queue_name = result.method.queue
 
-channel.queue_bind(exchange='logs', queue=queue_name)
+channel.queue_bind(exchange='fanout_logs', queue=queue_name)
 
 print(' [*] Waiting for logs. To exit press CTRL+C')
 
